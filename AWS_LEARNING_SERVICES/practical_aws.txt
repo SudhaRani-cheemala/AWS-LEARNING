@@ -1,0 +1,32 @@
+Ways to connect to the ec2:
+
+while connecting to ec2 using .pem you can connect in two ways 
+   - directly from open ssh command line
+   - convert pem into .ppk file and use in putty
+While connecting to ec2 using .ppk we have only one way that is only putty
+
+Using SSM-Agent:
+   - 
+
+
+
+
+Elastic Ip:
+ - goto elastic ip crete one elatic ip address and now associate that ip to instance which you want to give.
+ - untill we relese that elastic ip that in use only and charges will be added so we have to remove that
+ - for remove first dissociate and then release the elastic ip
+
+Storage Backup:
+   Creating AMI:
+      - Go to instnce from which you want to create AMI
+      - IAMGE and Template-->create image--> No reboot() 
+
+Storages are 3 types:
+   - Block Storage(EBS):storage in laptops and pc's
+   - Object Storage(S3): storage we use in google drive(like files)
+   - File level storage(EFS):onge drive ,shared drive (can access from a group of computers)
+
+
+
+
+

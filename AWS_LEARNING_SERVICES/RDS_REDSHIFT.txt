@@ -45,4 +45,5 @@ RDS Easy Database:
    Typically, it selects a predefined instance class based on general-purpose use, which may not be optimized for all workloads.
    It sets default backup and maintenance settings, which are often suitable for basic use cases but may require adjustments for more complex environments.
    Tends to provide a simpler network setup, which may not be as flexible as what you can achieve through the standard create option.
+   
       
