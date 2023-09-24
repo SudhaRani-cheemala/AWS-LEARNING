@@ -1,0 +1,17 @@
+Tasks To Be Performed:
+1. Create an S3 Bucket for file storage.
+2. Upload 5 objects with different file extensions.
+
+
+Steps:
+  Goto S3
+  Click on Craete Bucket button
+  Give Unique name to bucket
+  select region
+  Object Ownership
+     ACL's disabled(if you give this option the at the time of opening of file object it will denies)
+     ACL's enabled(if you give this option the at the time of opening of file object it will allow to open)
+ Block all public access(when you click on this check box at the time of opening file object it will denies to open)
+ Bucket Versionsing (if you enable this one you will get uploaded bucket objects with different version ,NOTE: when you change the same file with different content also it will be uploaded with different 
+                         bucket versions)
+

@@ -1,0 +1,31 @@
+2. Create a CloudWatch alarm which goes off to an Alarm state when the
+CPU utilization of an EC2 instance goes above 65%. Also add an SNS
+topic so that it notifies the person when the threshold is crossed.
+
+Steps:
+  ->initially Create on EC2 instance while creating in advance settingseable cloudwatch option    
+  -> Go to cloudWatch service
+  -> Select All metrics
+  -> there browse for EC2,selct Ec2 in that Pre-Instance Metrics select the respective EC2 with 
+     CpuUtilization Checkbox
+Now goto Create Alarm-->Select Metric->select Ec2-->Select Pre-Instance Metric-->select for ec2 instance cpu utilization checkbox
+Click on Select Metric-->Coditions as Static->give threshold Greater tah or any option-->give threshold value-->Here you can select Existimg SNS or Create New SNS 
+Select Next-->give alarm name -->next create alarm
+
+
+For Checking purpose:
+  
+login to the ec2 instance and istall stress
+ by followimg commands
+   stress --help
+      sudo amazon-linux-extras install epal -y
+      stress --help
+      stress --cpu 1 --timeout 3600s(sample syntax)
+      stress -c 1 -t 3600
+
+After that the alarm is in inAlarm state and click on the alarm and check for its utilization
+
+
+              
+  
+

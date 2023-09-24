@@ -1,0 +1,182 @@
+AWS QUIZ:
+1).An organization wants to route traffic between its on-premises network and AWS resources over a secure connection. Which AWS service is designed for this use case?
+A. VPN Connection
+2). A financial institution needs a backup data center to take over if the primary data center experiences issues. Which Route 53 feature allows automatic failover to the backup data center?
+A. failover routing
+3).A company wants to route traffic to different AWS regions based on the geographic location of the user. Which Amazon Route 53 routing policy should they use for this purpose?
+A. Geograpiclocation
+4).You have private EC2 instances within a VPC that need to initiate outbound connections to the internet. Which AWS resource should you use to enable this?
+A. NAT GATEway
+5). You want to restrict access to a specific S3 bucket to only a certain group of IAM users. What should you attach to the IAM users to achieve this?
+A. IAM policies
+6).A company is developing a web application that requires a relational database service to store customer data, orders, and product information. Which AWS service should they use for this purpose?
+A. Amazon RDS
+7).A media company wants to store and serve video files to users worldwide through a scalable and highly available service. Which AWS storage service should they use?
+A.  Amazon S3
+8). An organization is running a web application with varying traffic patterns throughout the day. Which ELB feature can automatically adjust the load balancing capacity in response to traffic changes?
+A.  AutoScaling
+9). A company needs to centralize and analyze logs from multiple AWS services such as EC2 instances, Lambda functions, and API Gateway. Which AWS service can help with log aggregation and analysis?
+A.  Amazon Cloud Watch logs
+10). You have a Java web application that needs automatic scaling and load balancing. Which AWS Elastic Beanstalk environment type should you use to achieve this?
+A.  Web Server Environment
+11). A startup is looking for a highly available and scalable DNS service to manage their domain names. Which AWS service can they use for this purpose?
+A.  Amazon Route53
+12). A company needs to execute code in response to events from various AWS services (e.g., S3 uploads, DynamoDB updates). Which AWS service is best suited for this event-driven serverless computing?
+A.  Aws Lambda
+13). You need to achieve the highest possible I/O performance for a database server in AWS. Which EBS volume type should you select?
+A. iov1 volume
+14). You want to track the number of requests to an Amazon S3 bucket over time. Which CloudWatch concept should you use to collect this data?
+A.  Cloudwatch Metrics
+15). You want to fan out a message to multiple subscribers, and each subscriber processes the message independently. Which Amazon SNS feature should you use for this purpose?
+A. Topic
+16). A small e-commerce startup is rapidly growing its customer base and wants to optimize its infrastructure costs. They are using various AWS services for their web application, including EC2 instances, RDS databases, and S3 for static content. What strategies and AWS services can they employ to reduce their infrastructure costs while maintaining high availability and performance?
+A. implement AWS Auto Scaling to adjust resources based on demand.
+17).  You need to back up the data stored in your Amazon F Sx file system on a regular basis to protect against data loss. What AWS service can be used for automated backups?
+A. Amazon FSx
+18). You need a file system for Windows applications that supports SMB (Server Message Block) protocol and is accessible from multiple Amazon EC2 instances. Which Amazon FSx deployment option should you choose?
+A. Amazon FSx for Windows File Server
+19). A critical application requires a highly available file system with automatic failover and data replication between two Availability Zones. Which Amazon FSx option should you choose?
+A. Multi AZ
+20). An organization wants to provide its users with access to shared file storage in a Windows environment. Which Amazon FSx feature allows for user authentication and access control?
+A.
+21).You have an application that needs to communicate with the internet while still maintaining a private IP address. What AWS service can help you achieve this?
+A. NAT GATEway
+22). You need to define rules for a group of EC2 instances that allow specific types of traffic and deny others. Which AWS resource is designed for this rule-based access control?
+A. Amazon Security Groups
+23).  You have an Amazon EC2 instance in a Virtual Private Cloud (VPC), and you want to attach additional network interfaces to it for specific network configurations. Which AWS resource allows you to do this?
+A.  Elastic network Interface
+24).  A small startup is looking to minimize its upfront infrastructure costs and scale resources as needed. Which cloud service model is best suited for their requirements?
+A.  Infrastructure as a service
+25). A security team wants to control inbound and outbound traffic to their EC2 instances at the instance level. Which AWS resource should they use for this purpose?
+A. Amazon Security Groups
+26).  You need to periodically export data from your database for offline analysis and archiving. Which AWS database service allows you to unload data to Amazon S3 for this purpose?
+A.  Amazon RDS
+27).  An organization wants to achieve faster application failover by dynamically routing traffic to healthy endpoints in case of an issue. Which feature of AWS Global Accelerator provides this capability?
+A.  health Checks
+28). You are dealing with a large volume of structured data that needs to be analyzed for historical trends. Which AWS service is suitable for this data warehousing and analytics use case?
+A.  Amazon RedShift
+29).  A company is building a high-throughput message processing system that decouples different components of its application. Which AWS service is designed for this type of asynchronous communication?
+A. Amazon SQS
+30). You want to create a custom notification mechanism for a real-time monitoring system that sends alerts when specific conditions are met. Which AWS service allows you to build this custom notification system?
+A.  Amazon SNS
+31). A development team is building a serverless application that processes incoming data from IoT devices in real-time. They need a service to trigger code execution in response to events. What AWS service can they use for serverless event-driven computing?
+A.  AWS Lambda
+32). You have a Rails application that requires customization of the underlying Amazon EC2 instances. Which AWS OpsWorks stack and layer should you use to configure these instances?
+A. Custom Stack and Custom Layer
+33). An e-commerce company experiences fluctuating traffic throughout the year, especially during holiday sales. Which AWS database service can be easily scaled to handle increased read and write requests?
+A.  Amazon dynamoDB
+34). You need a service that provides application monitoring and metrics to troubleshoot and optimize your environment. Which AWS service can help you visualize the performance of your applications and resources?
+A.  Amazon CloudWatch
+35).  You want to import a large dataset into your database and need a service that supports parallel data loading and automatic compression. Which AWS database service provides this functionality?
+A. Amzon RedShift
+36). You are designing a shared storage solution for a cluster of web servers that need to access the same files simultaneously. Which AWS service is best suited for this purpose?
+A.  Amazon EFS
+37). An e-commerce website wants to monitor the response times of its application servers, generate alarms when thresholds are exceeded, and collect historical data for analysis. Which AWS service can help accomplish this?
+A.  Amazon CloudWatch
+38). A retail website expects a surge in traffic during Black Friday sales. Which AWS service should be used to automatically increase the number of EC2 instances to handle the increased load?
+A. Amazon Ec2 AutoScaling
+39). A company needs to automate the configuration and management of its application servers and environments. Which AWS service offers a configuration management and deployment solution?
+A.  AWS OpsWorks
+40). You need to distribute incoming traffic across multiple AWS regions while maintaining high availability. Which AWS Global Accelerator feature enables this capability?
+A.  Accelerator PORT
+41). An organization wants to take automated actions, such as stopping or terminating EC2 instances, when specific performance thresholds are exceeded. Which AWS service can help achieve this?
+A.  Amazon Cloud Watch Alarms
+42). A mobile app needs to send push notifications to millions of users across various platforms (iOS, Android, and more). Which AWS service provides a scalable and cross-platform notification mechanism?
+A.  Amazon SNS
+43). You want to ensure that the Auto Scaling Group (ASG) always maintains a specific number of running instances, even if they become unhealthy. Which ASG parameter should you configure for this?
+A    Desired CapacityYou have a requirement to automatically transition objects from S3 Standard to S3 Glacier after 90 days of inactivity. Which S3 feature should you use to implement this?
+44). You need to ensure that messages sent to a queue are delivered to one and only one consumer. Which type of Amazon SQS queue should you use for this purpose?
+A.  FIFO Queue
+45). You have a web application that requires GPU acceleration for machine learning tasks. Which EC2 instance type should you choose?
+A.  p3.2xlarge
+46). You want to create a custom CloudWatch metric to monitor a specific aspect of your application's performance. Which AWS service allows you to publish custom metrics to CloudWatch?
+A. AWS Lambda
+47). A software development team needs to share large datasets among team members. Which feature of Amazon S3 should they use to efficiently distribute these datasets?
+A.  AWS S3 multipart uploads
+48). An organization wants to allow internet access to resources within its VPC. What AWS component facilitates this connectivity?
+A.  Internet Gateway
+
+49). A data analytics company needs to store and query large datasets efficiently. They require a serverless, scalable, and cost-effective data warehousing solution. What AWS service can they use to meet these requirements?
+A.  Amazon RedShift
+50). A company is using an Application Load Balancer (ALB) with Route 53 to route traffic to its microservices. What type of health checks can be configured for the ALB to ensure service availability?
+A.  HTTP Checks
+51).  You have a requirement to automatically transition objects from S3 Standard to S3 Glacier after 90 days of inactivity. Which S3 feature should you use to implement this?
+A.  S3 lifecycel policies
+52). A company needs a fully managed file system service that is compatible with the Windows file system. Which AWS service provides this capability?
+A. Amazon FSx
+53).  You want to ensure that the emails you send have a higher chance of being delivered to the recipients' inbox and not marked as spam. Which Amazon SES feature can help you achieve this?
+A. Verified Identities
+54). A global e-commerce company wants to improve the availability and performance of its web application by routing traffic through AWS infrastructure closer to users. Which AWS service should they use for this purpose?
+A. Amazon Global Accelerator
+55). You want to receive notifications whenever the CPU utilization of an EC2 instance exceeds a specified threshold. Which CloudWatch component should you use to set up this alert?
+A. CloudWatch Alarms
+55). You are managing an e-commerce website, and you want to organize your product images and other assets in a scalable manner. What is the most appropriate concept in Amazon S3 for this purpose?
+A.  S3 bucket
+56). A global company wants to distribute user requests evenly across multiple endpoints in different AWS regions. Which Route 53 routing policy should they use to accomplish this?
+A.  Weighted Routing
+57). You want to create a high-availability architecture for your application by attaching multiple ENIs to an EC2 instance in different Availability Zones. What is the maximum number of ENIs you can attach to an EC2 instance by default?
+A.  15ENI per instance
+58). A healthcare provider is planning to store sensitive patient data in AWS. They need to ensure data privacy, security, and compliance with healthcare regulations such as HIPAA. What AWS services and configurations should they implement to achieve this while still taking advantage of the cloud's scalability and flexibility?
+A.  Utilize AWS IAM for access control and implement encryption at rest and in transit.
+59). You want to process uploaded images automatically whenever they are added to an S3 bucket. Which AWS service can be used to trigger Lambda functions in response to S3 events?
+A.  S3 Event notification
+60). An organization wants to share a file system between multiple Amazon EC2 instances and on-premises servers using a network file system protocol. Which Amazon FSx feature provides this capability?
+A.  User Mapping
+61). A company wants to distribute incoming traffic across multiple EC2 instances in different availability zones. Which type of Elastic Load Balancer (ELB) should they choose?
+A.  Application Load Balancer
+62). You are a developer who wants to deploy a web application without managing the underlying infrastructure. Which AWS service abstracts the infrastructure complexity and allows you to focus on your code?
+A.  Elastic beanstalk
+63). You need a fully managed relational database service that supports multiple database engines (e.g., MySQL, PostgreSQL, SQL Server). Which AWS service provides this flexibility?
+A.  Amazon RDS
+64). An e-commerce website experiences varying traffic throughout the day. Which AWS service can automatically adjust the number of EC2 instances based on traffic patterns?
+A.  Amazon Ec2 AutoScaling
+65). A startup company is launching a new social media platform and expects rapid growth in user engagement. They need to ensure that their application can scale dynamically and handle unpredictable traffic spikes efficiently. Which AWS service should they use to automatically manage the infrastructure and scale resources based on demand?
+A. Amazon Ec2 AutoScaling
+66). An e-commerce platform wants to send order confirmation emails to customers and needs a reliable email delivery service. Which AWS service provides email sending capabilities?
+A. Amazon SES
+67). A development team wants a simple way to deploy code updates for their Node.js application without manually managing the deployment process. Which AWS service can help streamline this?
+A. Elastic beanstalk
+68). To ensure high availability for a critical application, you want to deploy resources in multiple physically separated data centers. Which AWS feature allows you to achieve this?
+A.  Availability Zones
+69).  You want to route traffic between different subnets within the same VPC. Which AWS component is responsible for managing the traffic between subnets?
+A.  route Tables
+70). You need a NoSQL database service that can automatically scale read and write capacity based on the application's traffic. Which AWS service offers this capability?
+A.  Amazon DynamoDB
+71). You need to create a stack of AWS resources consistently across multiple environments (e.g., development, staging, production). Which concept in CloudFormation helps you achieve this?
+A.  Amazon Template formation
+72). You have two VPCs, each with different resources, and you want them to communicate securely. What AWS feature should you use to establish connectivity between these VPCs?
+A.  VPC peering
+73). A data analytics team wants to run complex queries on large datasets for business intelligence. Which AWS service is designed for fast query performance and data warehousing?
+A.  Amazon RedShift
+74). An organization wants to grant temporary permissions to a contractor who will be working on an AWS project for a limited time. Which IAM feature should they use to accomplish this securely?
+A.  IAM Roles
+75). A financial institution is considering moving its data center to the cloud for cost savings and scalability. They want a fully managed database service to replace their on-premises databases. Which AWS service is appropriate for this use case?
+A.  Amazon RDS
+76). A data processing pipeline requires triggering tasks whenever new data arrives in an Amazon S3 bucket. Which AWS service can be used to trigger these tasks automatically?
+A.  AWS Lambda
+77). You have an application that requires 6 TB of storage. Which EBS volume type would be the most cost-effective choice for this scenario?
+A. Cold HDD
+78). You need to control inbound and outbound traffic to your EC2 instances using AWS security features. Which one is implemented at the instance level?
+A. Security groups
+79). A company wants to create an isolated network within AWS for their application servers and databases. Which AWS service should they use to accomplish this?
+A.  Amazon VPC
+80). A DevOps engineer wants to automate the deployment of AWS resources for a new microservices application. Which AWS service can help create and manage the infrastructure as code?
+A.  AWS Cloud Formation
+81). A company wants to separate its application into different availability zones within a VPC for fault tolerance. What AWS resource is designed for this purpose
+A. Subnets
+82). You want to securely share sensitive documents with specific users and ensure that they can access the objects only for a limited time. What AWS feature can you use to generate time-limited URLs with access permissions?
+A.  S3 pre signed URLs
+83). An e-commerce website wants to ensure that its website is always available, even in the case of an AWS region outage. Which Route 53 feature can help achieve this goal?
+A.  Failover Routing
+84). You have a complex application with multiple components that need fine-grained control over configuration. Which AWS service offers Chef and Puppet integration for configuration management?
+A. AWS Ops Work
+85). A company wants to store infrequently accessed data in Amazon S3 to reduce storage costs. Which S3 storage class should they choose?
+A. S3 Standard-IA (Infrequent Access)
+86). Your application needs to distribute incoming HTTP traffic across multiple EC2 instances. Which AWS service can help you achieve this?
+A.  Elastic ELB
+87). An organization needs to make a set of objects publicly accessible for a limited time, such as sharing software downloads. What is the recommended way to configure public access for these objects in S3?
+A. Use a signed URL for temporary public access
+88). You need to optimize query performance for analytical workloads by distributing data across multiple nodes. Which AWS data warehousing service should you use for this purpose?
+A. Amazon Redhat
+
+

@@ -1,0 +1,11 @@
+S3 Assignment-2
+1. Enable versioning for the bucket created in task 1.
+2. Re-upload any 2 files already uploaded to verify if versioning.
+
+-->Goto the s3 service
+goto already existing bucket objects and reuplad the same file object with
+change in the content
+---> Enable the bucket version in the properties tab and enable the version 
+--->now upload the alraedy existing file object
+--->Now copy the object URL and check for the file content
+ 

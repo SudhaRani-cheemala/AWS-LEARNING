@@ -1,0 +1,37 @@
+1).Create an EFS and connect it to different ec2 instances(different O/S)
+ Steps:
+  1).Create two Security groups MywebSecurityGroup with ssh from anywhere on IPV4
+     Another Security group MyEFSSecurityGroup with nfs port from MywebSecurityGroup
+  2). Create EFS selecting customize standard and mount click on Next 
+      select mount target groups with availability zones as us-east1a,us-east1b
+      select Next and then Create
+  3). Efs will be craeted 
+  4). Create 3 ec2 instances with different operating systems(Ubuntu,Amazon Linux,Redhat) by giving Security group as MywebSecurityGroup
+      and give network subnet in the regions us-east1a and us-east1b
+  5).Now connect to the one of the ec2 instance 
+      enter the following commands which have been taken from efs attach section
+      initially install efs-utils package
+        for amazon-linux--> sudo yum -y install amazon-efs-utils
+         now navigate to the efs section click on Attach
+         from there take the efs mount helper command and paste
+		    sudo yum -y install amazon-efs-utils
+		    mkdir /efs 
+		    sudo mount -t efs -o tls fs-056150db2ed705dfe:/ efs(here replace efs with /efs)
+			df -h
+			here you will find new file system with mounted on /efs
+         		 
+	    for Ubuntu server
+		   sudo apt-get imstall nfs-common-y
+		   mkdir /myefs 
+		   navigate to Using the NFS client:
+		   sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-056150db2ed705dfe.efs.us-east-1.amazonaws.com:/ /myefs
+		   repalce efs with /myefs
+
+  	  
+       for RedHat server:
+	        sudo yum install nfs-utils-y
+			mkdir /myefs
+			sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-056150db2ed705dfe.efs.us-east-1.amazonaws.com:/ /myefs
+			df -h
+			
+ 

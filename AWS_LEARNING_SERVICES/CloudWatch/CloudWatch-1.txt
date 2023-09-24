@@ -1,0 +1,62 @@
+
+Module 3: CloudWatch Alarms
+Assignment
+
+Problem Statement:
+You work for XYZ Corporation. To maintain the security of the AWS account and
+the resources you have been asked to implement a solution that can help easily
+recognize and monitor the different users. Also, you will be monitoring the
+machines created by these users for any errors or misconfigurations.
+
+Tasks To Be Performed:
+1. Create a CloudWatch billing alarm which goes off when the estimated
+charges go above $500.
+
+
+Access AWS Billing Dashboard:
+
+Log in to your AWS Management Console.
+Go to the AWS Billing and Cost Management Dashboard.
+Enable Billing Alerts:
+
+Ensure that billing alerts are enabled. To do this, navigate to the "Preferences" page in the AWS Billing and Cost Management Dashboard. Under "Monthly Cost Reports," enable "Receive Billing Alerts."
+Create a Billing Alarm:
+
+Navigate to the CloudWatch service in the AWS Management Console.
+Create an Alarm:
+
+In the CloudWatch console, click on "Alarms" in the left navigation pane.
+Create Alarm:
+
+Click the "Create Alarm" button.
+Select Metric:
+
+In the "Create Alarm" wizard, under "Select metric," click on the "Billing" namespace.
+Choose a Billing Metric:
+
+Select the "EstimatedCharges" metric.
+Define Conditions:
+
+Configure the conditions for your alarm. In this case, you want the alarm to trigger when estimated charges exceed $500. Set the following conditions:
+Whenever "EstimatedCharges" is "Greater than" or equal to "500."
+Set the threshold for "1 consecutive period" (this means it will trigger as soon as the threshold is crossed).
+Set Actions:
+
+Under "Actions," choose the action you want to take when the alarm state is triggered. You can choose to send a notification to an SNS topic or perform other actions like stopping or terminating specific resources. To send a notification, click on the "Create a new topic" link and set up an SNS topic for billing alerts.
+Name and Description:
+
+Give your alarm a name and, optionally, a description.
+Additional Configuration (Optional):
+
+You can set up additional alarm configuration options, such as enabling/disable actions, specifying an alarm state trigger period, or specifying treat missing data as "breaching" or "not breaching" based on your requirements.
+Review and Create:
+
+Review your alarm configuration and click the "Create alarm" button.
+Now, your billing alarm is set up, and it will trigger whenever the estimated charges exceed $500. You will receive notifications through the SNS topic you configured when the alarm state changes to "ALARM."
+
+Remember that AWS generates billing data periodically, so there may be a delay before the estimated charges are updated and the alarm is triggered. Additionally, ensure that your AWS account has the necessary permissions to create CloudWatch alarms and access billing data.
+
+
+
+
+
