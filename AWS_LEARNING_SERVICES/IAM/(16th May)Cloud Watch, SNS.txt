@@ -1,0 +1,54 @@
+Cloud Watch:
+------------
+
+
+-> It is a service which helps to monitor AWS services/ resources.
+-> Monitoring service:
+  -> AWS services
+    >eg: EC2 service -> instance
+    -> by using the cloud watch we can monitor the instance. -> cpu, memory, network I/O, disk.
+
+    -> whenever we create a instance, it automatically generates predefined metrics.
+    -> eg: CPU is a predefined metrics,whenever we create a instance it is automatically generates these metrics in the cloud watch.
+    -> if you want to monitor the CPU utilization then we need to configure the metrics, by creating alerts.
+
+  -> we have 3 states:
+  1.) OK state
+  2.) insufficient state
+  3.) Alarm state
+
+if CPU > 80:
+-> when cpu utilization is 50 then the status will be on OK state
+-> when cpu utilization is 90 then the status will be on Alarm state.
+-> when the instance is terminated / stop, then in those cases it will in insufficient state.
+
+-> we can get the details and alerts of the metrics through mail called SNS (simple notofication service).
+-> by using this service we ask the cloud watch to send the email -> when it is ok state, Alarm state and insufficient state.
+->to configure the SMS we need to create a topic.Topic is nothing but a group.
+-> inside this topic we can add emails, we will call this as subscription.
+-> by default time for monitoring in cloud watch is 5 minutes.
+-> we have 2 types to cloud watch monitoring i.e., 
+  1.) default cloud watch monitoring:
+  for every 5 minutes it monitors/ checks for which we have configured.
+  -> it is less cost.
+  2.) detailed cloud watch monitoring: 
+  that is we can modify the duration by 10s, etc.
+  -> it is more expensive.
+  -----------practical-----------
+
+  > from the console goto SNS service.
+  >create topic: awsalerts >next step
+  >display name: serveralerts {this is just to display instead of from address} > click on create topic
+  -*> topic is nothing but a group.
+  -> inside that topic we can add subscriptions.
+> click on create subscription
+>protocol: email
+>endpoint: {provide the email address you want to receive the email}
+> click on create subscription
+
+*-> we will get confirmation email from the AWS, if we confirm that then only we will receive the email.
+
+> goto the email and click on the confirm the subscription.
+*-> we can add any number of subscriptions under one topic.
+-----------------------------------------------------------
+

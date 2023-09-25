@@ -1,0 +1,11 @@
+Create 4 IAM users and name it as dev1,dev2,test1,test2
+Create 2 groups named DevTeam and TestTeam
+Add dev1 and dev2 to DevTeam
+Add dev1,dev2,test1 to TestTeam
+ Steps:
+   login to AWS Console 
+   Navigate to IAM 
+   create both DevTeam group and TestTeam group
+   create IAM users  dev1 ,dev2 add it to the group DevTeam
+   create IAM users  test1,tes2 and dev1 add it to group TestTeam 
+    

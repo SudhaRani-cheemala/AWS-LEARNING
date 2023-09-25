@@ -1,0 +1,89 @@
+
+Module 3: IAM Roles Assignment
+
+Problem Statement:
+You work for XYZ Corporation. To maintain the security of the AWS account and
+the resources you have been asked to implement a solution that can help easily
+recognize and monitor the different users.
+
+Tasks To Be Performed:
+1. Create a role which only lets user1 and user2 from task 1 to have complete
+access to VPCs and DynamoDB.
+2. Login into user1 and shift to the role to test out the feature.
+Steps: Creating a new policy named VPC_Dynamo_policy
+
+Create Policy for full access of dynamoDB,VPC by Json format
+   {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*",
+                "ec2:Create*",
+                "ec2:Modify*",
+                "ec2:Delete*",
+                "dynamodb:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+step2:
+  After creation of Policy,Create Role name called IAM_ROLE_Assign
+  by navigatin to the left side of the aws console page
+  by giving the policy Which we ahve craeted previously
+
+step3:
+  Create to IAM users user1 and user2 by switching to the left side panel of the aws console 
+  don't assign any policies or any groups
+
+step4:
+
+  Switch to the Role and click on the name of the Role IAM_ROLE_Assign 
+  Goto Trust relationship and edit trust replationship
+ 
+
+   {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::231772804669:user/user1",
+                    "arn:aws:iam::231772804669:user/user2"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+here add the ARN's of the user1 and user2
+"AWS": [
+                    "arn:aws:iam::231772804669:user/user1",
+                    "arn:aws:iam::231772804669:user/user2"
+                ],
+
+update policy
+
+step4:
+  
+   Now go to the user1 and click on Security Credentials Console sign-in and enable the console access and set password
+   Now you can access the user1 through console by taking console sign in link give username and password sign-in to the user1
+
+step5:
+  Goto the user1 sign-out part which is at right side of the console page
+  click on the Switch Role button
+   there give Account id:enter 12 digit account id
+              Role name :which you can find in the last part of ARN of role
+              Displayname:takes automatically
+              Color:Choose color
+              Click on the Swich Role
+
+Finally the page will navigate to the Role there you can check for the features based on the policies 
+which we have given.
+
