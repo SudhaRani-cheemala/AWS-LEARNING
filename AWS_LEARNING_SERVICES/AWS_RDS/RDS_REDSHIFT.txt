@@ -1,0 +1,82 @@
+RDS and Red shift:
+
+Any unstructed data:s3
+Semi structured
+Structured :Relational Databse ACID is defined in the relational database
+RDS(MYsql,mssql,postgres,mariaDb,Oracle,Aurora DB),Relations maintained between multiple tables.
+
+Document DB(Mongo DB,Couchbase,DocumentDB,DynamoDB):
+which store data in tables with fixed schemas, document databases allow you to store data in a more dynamic and schema-less way
+here you can hace flexibility to modify the schema.
+NoSQL database: 
+example:Catalog System of amazon.com/e-commerce platform
+------------------------------
+Ever Increasing data example:Uber/OLA apps where drivers are increaing day by day, you want to run
+finite set of queries columnar data storage
+Cassandra DB/HBase
+NOTE:In relational database you can store certain terabites of data only
+in NoSQL you can modify the schema at any point
+===================================================
+Relation ,run  queries a historical data analytics queries on top of my data
+RedShift is one if the datawarehousing database
+RedShift(OLAP) online analytical processing database
+RDS is an example of OLTP database  Online transactional processing database.
+It stores data in column format,Compresses data to the great extent,massively parallel processing operations
+
+Example to create RDS in AWS:
+  
+Steps:
+ Initilly create 3 security groups:
+  first one  is LBSG with anywhere IP http
+  2nd one is http with LBSG IP and ssh with Any where IP.
+  3rd one is RDSG with MYsql/Aurora custom WEBSG we have to choose.
+ NOTE:
+   Primary Database: The primary database is the authoritative source of data. It is the primary instance where all data modifications (inserts, updates, deletes) occur. This database is typically the one actively used by applications for read and write operations.
+Secondary Database: A secondary database, also known as a standby database or replica, is a copy of the primary database. It plays a passive role in that it does not accept direct write operations from applications. Instead, it is kept in sync with the primary database to provide data redundancy, backup, or disaster recovery capabilities.
+RDS Standard create :
+ This option provides more flexibility and control over the configuration of your RDS instance. You can specify various parameters like database engine, instance class, storage type, backup settings, security groups, and other advanced configurations.
+  It allows you to fine-tune the database settings to meet specific requirements, making it suitable for complex use cases or applications with unique demands.
+  You can choose the instance class (CPU and memory) that best matches your workload's requirements, allowing you to scale up or down based on your needs.
+  You have more control over backup retention, maintenance windows, and automated backups, enabling you to tailor these settings to your specific needs.
+  You can configure security groups, Virtual Private Cloud (VPC) settings, and other network-related parameters as needed for your application's security and networking requirements.
+RDS Easy Database:
+   As the name suggests, it's a simplified way to create an RDS instance. It is designed for users who want to quickly launch a database instance with default settings. It minimizes the configuration steps, making it easier for beginners to get started.
+   Offers limited customization options, and most settings are preconfigured by AWS based on best practices. This simplifies the process but may not be suitable for all scenarios.
+   Typically, it selects a predefined instance class based on general-purpose use, which may not be optimized for all workloads.
+   It sets default backup and maintenance settings, which are often suitable for basic use cases but may require adjustments for more complex environments.
+   Tends to provide a simpler network setup, which may not be as flexible as what you can achieve through the standard create option.
+
+What is multi AZ DB option:
+  if you have only single machine to do all the transactions,but now you have  a requirement to do your DB Mofre available in this case we will use Multi Az option.
+example: a user doing transaction to primary DB, and parallely syncing all the transactions to secondary DB
+example:AWS is doing some maintenance to the DB When you using the multi AZ as an option in the back the secondary DB is going to create
+this SDB to take it over in the event a maintenance going on for the PDB(Primary Database) all the the connections to be pointed to the SDB(Secondary Database)
+You as an end user will never ever see this because this is what happens in the back.
+
+NOTE:This process will happen automatically.
+
+
+Script to run on vm1(ec2) for RDS
+
+wget https://wordpress-5.1.1.tar.gz
+tar -xzf wordpress-5.1.1.tar.gz
+cp -r wordpress/* /var/www/html/
+rm -rf wordpress
+rm -rf wordpress-5.1.1.tar.gz
+chmod -R 755 wp-content
+chown -R apache:apache wp-content
+service httpd start
+chkconfig httpd on
+echo "healthy" > /var/www/html/healthy.html
+
+Read Replica means here you can create a copy of Our database here you can only read the DB you have no chance to write the DB
+
+For highly available DB--> Multi Az's will be used
+Improving the performance either Read replica or Elastic cache can be used
+RED SHIF:
+ Another kind of DB which is OLAP DB:
+    Redshift is literally faster DB this is  a columnad DB
+    
+
+   
+      
