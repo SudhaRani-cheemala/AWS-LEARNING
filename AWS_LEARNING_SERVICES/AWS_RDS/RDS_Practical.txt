@@ -1,0 +1,17 @@
+ Create an EC2 instance 
+ Install mysql on it by following steps:
+   sudo apt update
+   sudo apt install mysql-server
+   sudo mysql_secure_installation
+   sudo systemctl start mysql
+   sudo systemctl enable mysql
+   sudo systemctl status mysql
+Now create RDS in AWS choose mysql
+copy the rds connect  userdb.cmowhfdbdtfk.ap-south-1.rds.amazonaws.com 
+Now in EC2 instance login as root user and paste the following text
+ mysql -h userdb.cmowhfdbdtfk.ap-south-1.rds.amazonaws.com -P 3306 -u Sudha -p
+ enter
+ asks for password enter password and now you will be able to see the mysql.
+ here -P --> mysql Port
+       -u -> DB user
+       -p --> Password  
