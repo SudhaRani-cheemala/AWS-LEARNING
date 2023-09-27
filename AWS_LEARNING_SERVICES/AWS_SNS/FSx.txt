@@ -1,0 +1,17 @@
+FSx:
+is a windows file share
+FSx mount to the multiple ec2 machines
+which works on the SMTP protocol
+FSx for the windows machines |
+EFS for the Linux machines
+
+Types of FSx:
+ 1).Fsx for windows file share
+ 2).Fsx for Lustre 
+ 3).Fsx for OpenZFS
+ 4).Fsx for NetApp ONTAP
+File share for windows file system
+FSx for Luxture for Machine learning ,finaincial Transactions
+
+you can connect this FSx from ec2 
+   
