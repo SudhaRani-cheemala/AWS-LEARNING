@@ -1,0 +1,98 @@
+Serverless Services(withoud using the ec2):
+  S3  Bucket  comes under serverless service because we can create static website hosting in s3.
+How to deploy serverless website:
+     this will allow us to host our website through which we will be able to request for a uniconfly
+AWS Amplify is used to host a website
+By using s3 we cannot integrate CI/CD pipeline
+But By using AWS Amplify we can integrate CI/CD Pipeline
+To provide the authentication to our web application we will use another service called COGNITO will be used.
+And there is a backend code running in the LAMBDA Function basically LAMBDA is Serverless Function
+here we are not maintain any servers
+here it will store the data in DynamoDB(NOsql)
+we cannot directly interact with the backend application here we will use only API Gaway
+here API Gate way making a call to the LAMBDA and stores data in DynamoDB.
+here API Gateway is the trigger for LAMBDA.
+In AWS also we have a service called codecommit which works as a git.
+Advantage is you can make it completely private.
+
+Practical:
+
+Create one repository in Codecommit
+Before cloning this repository we need credentials to connect this repository
+so here we will create an IAM User for permissions
+for this user asd pernission as administrator access permission
+After this need credentials for this user
+create two types of credentials 1).Access key and download the credentials
+                                2). Https git credentials for AWS Code Commit
+Now download the AWS-Cli for cli access
+
+Now from cli clone the repository using https
+here it will ask for credentials and we have to login this with credentials which have taken from IAM User Credentials
+Http git repository
+cli_user-at-231772804669
+WgAla2JVYcB/JcAUoZmal9r5+M785i+HE6+OVJa+fxw=
+now go into the folder Wild_site here we have to download entire code from s3 bucket
+just create a file and use git commands as git add .
+                                           git commit -m "commiting"
+                                           git push
+---------------------------------Frontend-----------------------------------------------------------------
+Now host the application usimg amplify
+  in Amplify we have two options
+  Amplify Studio
+  Amplify Hosting
+here select Amplify Hosting
+choose AWS Code commit
+here choose repository
+finally save and deploy.
+then open the website in console 
+Now you can add authentication to that website:
+  for this goto the AWS COGNITO-->Click on create user pool-->after craetion you will get pool id(ap-south-1_ESj7pQ8OD)
+  in App integration you will get Client id: 14artc2g2q0p3ifkfh7n65ufrc
+  goto-->Repository and add these poolid and clientid in config file of js
+  After thisnlogin tomthe website it will give you have successfully authenticated here
+  ------------------------------------------------------------------------------------------------------------
+ NOW ADD DynamoDB:
+    for backend DB purpose add DynamoDB.
+    Create DynamoDB table with default options
+    Now build the Lambda function and put the backend code in LAMBDA Function
+    Before that we need IAM Role
+    Give policy as LAMBDA Basic execution
+    then create role
+    this role will be used by LAMBDA Function
+    LAMBDA Function should be executed by API Gateway.
+    Now externally add another policy by clicking on inline policy and add service as DynamoDB(select putItem)
+    here add ARN of dynamoDB that you can find additional info od DynamoDB(arn:aws:dynamodb:ap-south-1:231772804669:table/Ride_Table)
+    finally created role that will give the permission to the LAMBDA Function.
+-------------------------Create Lambda Function--------------------------------------------------
+
+After Creation default code will be added here 
+put our code here(Backend)
+Deploy the code
+then test the code if the code is correct then it will craete a table in DynamoDB
+then click on Test and copy the code which is in json format
+   {
+  "key1": "value1",
+  "key2": "value2",
+  "key3": "value3"
+}
+ the see the status code which should be 201
+Then we should see the item is stored in DyanmoDB
+based on the number of requests the LAMBDA function will expand
+-----------------------------------API Gate way----------------------------------------
+Now create the API Gateway:
+ Now craete public REST based API calls
+ it protects our websites from hackers.
+ throttling limit we can give in this.
+   
+The main advantage here is the cost without using the ec2.
+ 
+  
+   
+
+   
+
+
+
+   
+
+

@@ -1,0 +1,13 @@
+SNS:
+push based messagenotification service
+another service parallel to it  SQS it is a pull based notification system to store the messages
+this message is never benn stored there
+Queing service(SQS): simple queing service is a reliable message storing system any email system have to pick up any mesages from this
+                     it does not allow any duplicates 
+Amazon Simple Queue Service (SQS) will let you send the messages, 
+store the messages, and receive the messages between various software components at any amount,
+ without losing of actual messages.
+ Also, without requiring some other services to should be available. 
+so, basically Amazon SQS is a distributed queue system.                  
+              
+	
